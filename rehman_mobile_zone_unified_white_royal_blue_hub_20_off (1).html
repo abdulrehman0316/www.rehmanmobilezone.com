@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>REHMAN MOBILE ZONE | Imperial Smartphone Sanctuary, Lab & Tools</title>
+  
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              800: '#1e3a8a',
+              900: '#00288e',
+              950: '#0b1c30'
+            },
+            accent: {
+              gold: '#f59e0b',
+              goldLight: '#fef3c7',
+              emerald: '#10b981',
+              emeraldDark: '#065f46'
+            }
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+    }
+    .card-glass {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px -2px rgba(0, 40, 142, 0.05);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-glass:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+      box-shadow: 0 16px 32px -6px rgba(0, 40, 142, 0.12);
+    }
+    .discount-ribbon {
+      background: linear-gradient(135deg, #1d4ed8 0%, #00288e 100%);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 40, 142, 0.25);
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 30%, rgba(219, 234, 254, 0.8) 0%, rgba(248, 250, 252, 0) 70%);
+    }
+  </style>
+</head>
+<body class="bg-[#f8faff] text-[#0b1c30] font-sans antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- ========================================================= -->
+  <!-- 1. TOP ANNOUNCEMENT TICKER                                -->
+  <!-- ========================================================= -->
+  <aside class="bg-brand-900 text-white text-xs border-b border-brand-800 relative z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent-gold text-slate-900 font-bold font-mono text-[11px]">
+          <span class="material-symbols-outlined text-xs fill-icon">stars</span>
+          FLAT 20% ROYAL PRIVILEGE DISCOUNT APPLIED
+        </span>
+        <span class="hidden md:inline-flex items-center gap-1 text-blue-100 text-xs">
+          <span class="material-symbols-outlined text-sm text-accent-gold">location_on</span>
+          Shop #14, Geo Mobile Mall, Sarjani Town, Karachi
+        </span>
+        <span class="hidden lg:inline-flex items-center gap-1 text-blue-100 text-xs">
+          <span class="material-symbols-outlined text-sm text-accent-gold">schedule</span>
+          Timings: 1:00 PM – 12:00 AM (Mon–Sun)
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-mono">
+        <a href="https://tiktok.com/@rehmankingyt" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-white transition-colors flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm text-accent-gold">smart_display</span>
+          @rehmankingyt
+        </a>
+        <span class="text-brand-700">|</span>
+        <a href="tel:03168518998" class="text-accent-gold hover:underline font-bold flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm">call</span>
+          0316 8518998
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- 2. MAIN NAVIGATION HEADER                                 -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-xl bg-brand-900 border-2 border-brand-700 flex items-center justify-center text-white font-display font-extrabold text-xl shadow-md group-hover:bg-brand-800 transition-all">
+          <span>RM</span>
+        </div>
+        <div>
+          <span class="font-display text-lg sm:text-xl font-extrabold tracking-tight text-brand-900 block leading-tight">
+            REHMAN MOBILE ZONE
+          </span>
+          <span class="font-mono text-[11px] text-brand-600 font-semibold tracking-wider block">
+            SANCTUARY & LAB // ABDUL REHMAN
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <a href="#hero" class="text-brand-700 hover:text-brand-900 transition-colors">Home</a>
+        <a href="#pillars" class="hover:text-brand-700 transition-colors">3 Pillars</a>
+        <a href="#mobiles" class="hover:text-brand-700 transition-colors">Flagship Mobiles</a>
+        <a href="#tools" class="hover:text-brand-700 transition-colors">Software & Dongles</a>
+        <a href="#hardware" class="hover:text-brand-700 transition-colors">Hardware Lab</a>
+        <a href="#tradein" class="hover:text-brand-700 transition-colors">Trade-In</a>
+        <a href="#specialist" class="hover:text-brand-700 transition-colors">Specialist</a>
+        <a href="#contact" class="hover:text-brand-700 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="tel:03168518998" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-brand-200 text-brand-800 hover:bg-brand-50 text-xs font-mono font-bold transition-all">
+          <span class="material-symbols-outlined text-sm text-brand-600">call</span>
+          0316 8518998
+        </a>
+        <a href="https://wa.me/923168518998?text=Assalam%20o%20Alaikum%20Abdul%20Rehman%20bhai%2C%20I%20am%20inquiring%20with%20Flat%2020%25%20Discount%20Privilege." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
+          <span class="material-symbols-outlined text-base fill-icon">verified_user</span>
+          <span>Consult Abdul Rehman</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 3. UNIFIED HERO SHOWCASE                                  -->
+  <!-- ========================================================= -->
+  <section class="relative overflow-hidden pt-12 pb-20 px-4 sm:px-6 max-w-7xl mx-auto hero-glow" id="hero">
+    <div class="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+      
+      <!-- Top Privilege Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-brand-200 shadow-sm mb-6">
+        <span class="w-2.5 h-2.5 rounded-full bg-accent-emerald animate-ping"></span>
+        <span class="font-mono text-xs font-bold text-brand-800 uppercase tracking-wide">
+          OFFICIAL UNIFIED SANCTUARY // SHOP #14 GEO MOBILE MALL KARACHI
+        </span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-extrabold font-mono bg-brand-700 text-white">
+          20% OFF ACTIVE
+        </span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+        SMARTPHONE SALES, HARDWARE LAB <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-brand-600 to-blue-500">
+          & AUTHORIZED SOFTWARE TOOLS
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-base sm:text-lg text-slate-600 max-w-3xl mb-8 leading-relaxed">
+        Pakistan’s premier integrated mobile hub by <strong class="text-brand-900 font-bold">Abdul Rehman</strong>. Combining 100% PTA-approved flagship smartphones, surgical diagnostic motherboard repairing, and authorized instant digital server licensing & dongle credits.
+      </p>
+
+      <!-- 4 Value Privileges Grid (No prices, pure 20% discount highlight) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 w-full mb-10">
+        <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-sm flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl fill-icon">verified</span>
+          </div>
+          <div>
+            <div class="font-mono text-xs font-bold text-slate-900">100% PTA APPROVED</div>
+            <div class="text-[11px] text-slate-500">Official Brand Warranty</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-sm flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">memory</span>
+          </div>
+          <div>
+            <div class="font-mono text-xs font-bold text-slate-900">SURGICAL LAB</div>
+            <div class="text-[11px] text-slate-500">Motherboard & Micro IC</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-sm flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">key</span>
+          </div>
+          <div>
+            <div class="font-mono text-xs font-bold text-slate-900">INSTANT SERVERS</div>
+            <div class="text-[11px] text-slate-500">UnlockTool, DFT, Pandora</div>
+          </div>
+        </div>
+
+        <div class="bg-brand-50 p-4 rounded-xl border border-brand-300 shadow-sm flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-lg bg-brand-700 text-white flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl fill-icon">percent</span>
+          </div>
+          <div>
+            <div class="font-mono text-xs font-bold text-brand-900">FLAT 20% DISCOUNT</div>
+            <div class="text-[11px] text-brand-700 font-semibold">Across All Inquiries</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20want%20to%20claim%20my%20Flat%2020%25%20Discount%20Privilege." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-display text-base font-bold shadow-lg shadow-blue-900/20 transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-xl">chat</span>
+          <span>Claim 20% Discount on WhatsApp</span>
+        </a>
+        <a href="tel:03168518998" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-brand-800 border-2 border-brand-300 font-display text-base font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-xl text-brand-700">call</span>
+          <span>Direct Hotline: 0316 8518998</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 4. THREE SOVEREIGN PILLARS                                -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="pillars">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+        // UNIFIED ROYAL CONGLOMERATE
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+        Three Pillars of Absolute Tech Mastery
+      </h2>
+      <p class="text-slate-600 mt-2 text-sm sm:text-base">
+        All capabilities combined under one roof at Geo Mobile Mall, Sarjani Town.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Pillar 1: Smartphone Vault -->
+      <div class="card-glass p-7 rounded-2xl relative flex flex-col justify-between">
+        <div class="absolute top-0 right-0 discount-ribbon text-[11px] font-mono font-bold px-3 py-1 rounded-bl-xl">
+          20% OFF RETAIL
+        </div>
+        <div>
+          <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-3xl">smartphone</span>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-semibold block mb-1">PILLAR I // RETAIL & SALES</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-3">
+            Flagship Smartphones
+          </h3>
+          <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+            Original box-packed and mint flagship handsets from Tecno, Infinix, Vivo, Realme, OPPO, Apple & Samsung with 100% official PTA tax clearance and warranty.
+          </p>
+          <ul class="space-y-2.5 mb-8 text-sm text-slate-700 font-medium">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              All Top Brands In-Stock at Geo Mobile Mall
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              Easy Installment Plans (0% Hidden Charges)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              Sealed Pin-Pack with 1-Year Brand Warranty
+            </li>
+          </ul>
+        </div>
+        <a href="#mobiles" class="w-full py-3 rounded-xl bg-brand-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-sm text-center border border-brand-200 transition-all flex items-center justify-center gap-2">
+          <span>Explore Phone Vault</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Pillar 2: Digital Tools & Dongles -->
+      <div class="card-glass p-7 rounded-2xl relative flex flex-col justify-between">
+        <div class="absolute top-0 right-0 discount-ribbon text-[11px] font-mono font-bold px-3 py-1 rounded-bl-xl">
+          20% OFF LICENSES
+        </div>
+        <div>
+          <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-3xl">terminal</span>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-semibold block mb-1">PILLAR II // DIGITAL DONGLES</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-3">
+            Software & Server Credits
+          </h3>
+          <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+            Authorized server distributor for worldwide repair software. 3, 6, and 12-month digital license credentials issued directly within 5 to 15 minutes.
+          </p>
+          <ul class="space-y-2.5 mb-8 text-sm text-slate-700 font-medium">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              Official Reseller: UnlockTool, DFT Pro, Pandora
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              Chimera Tool, UMT, CM2, Octoplus Credits
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              Instant Server Token Activation 24/7
+            </li>
+          </ul>
+        </div>
+        <a href="#tools" class="w-full py-3 rounded-xl bg-brand-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-sm text-center border border-brand-200 transition-all flex items-center justify-center gap-2">
+          <span>Browse Mobile Tools</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Pillar 3: Hardware Diagnostics Lab -->
+      <div class="card-glass p-7 rounded-2xl relative flex flex-col justify-between">
+        <div class="absolute top-0 right-0 discount-ribbon text-[11px] font-mono font-bold px-3 py-1 rounded-bl-xl">
+          20% OFF LAB BENCH
+        </div>
+        <div>
+          <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-3xl">home_repair_service</span>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-semibold block mb-1">PILLAR III // PRECISION LAB</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-3">
+            Hardware Repair Lab
+          </h3>
+          <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+            Surgical microscope motherboard micro-soldering, authentic OLED restoration, certified battery replacements, and ultrasonic liquid damage recovery.
+          </p>
+          <ul class="space-y-2.5 mb-8 text-sm text-slate-700 font-medium">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              Original AMOLED & Super Retina Displays
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              BGA Motherboard Power IC Reballing
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-lg fill-icon">check_circle</span>
+              RMZ Lab Warranty on All Hardware Repairs
+            </li>
+          </ul>
+        </div>
+        <a href="#hardware" class="w-full py-3 rounded-xl bg-brand-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-sm text-center border border-brand-200 transition-all flex items-center justify-center gap-2">
+          <span>View Diagnostic Lab</span>
+          <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 5. SMARTPHONE DIRECTORY (Prices removed -> 20% OFF)      -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="mobiles">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+          // REHMAN MOBILE ZONE DIRECTORY
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Official PTA Smartphone Catalog
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-1">
+          Explore flagship devices. All retail pricing replaced with instant 20% Privilege Discount.
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="discount-ribbon font-mono text-xs font-bold px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm fill-icon">sell</span>
+          Flat 20% Discount Guaranteed
+        </span>
+      </div>
+    </div>
+
+    <!-- Product Grid (Prices Replaced with 20% OFF Badges & WhatsApp Actions) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Phone 1: Tecno Camon 30 Pro -->
+      <div class="card-glass rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="relative bg-slate-50 rounded-xl p-4 aspect-[4/3] flex items-center justify-center mb-4 border border-slate-100">
+            <span class="absolute top-2.5 left-2.5 discount-ribbon text-[10px] font-mono font-bold px-2.5 py-0.5 rounded">
+              20% OFF
+            </span>
+            <img class="w-full h-full object-contain mix-blend-multiply" alt="Tecno Camon 30 Pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgmtfmMAh93xsuDtgcwOFwUgXDilKfSeIxJgDzaZyq1sTKvFwgArVTJkVzyHof6v6eXm0pzrbZqi2h7Fo_CUtwyvN1VwUXl1zn3bYtJPX91c2QKZMmHpSPJ8iMT6uACgtkXFrEOtQL0pIKRH1P0hnRuhoUS8czDIFgaVdE1ZaPHwvNNFxw-0STka6NBFZm313QyuVz6seRLvMAzwYby2OUsv3VrFSBz3-GX-x8SgM9"/>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider block">TECNO OFFICIAL // PTA APPROVED</span>
+          <h3 class="font-display text-lg font-bold text-slate-900 mt-1">Tecno Camon 30 Pro 5G</h3>
+          <p class="text-slate-600 text-xs mt-1 mb-4">50MP Sony IMX890 OIS • Dimensity 8200 Ultimate</p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-4 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Memory:</span><span class="font-bold text-brand-900">12GB + 12GB Extended</span></div>
+            <div class="flex justify-between text-slate-700"><span>Storage:</span><span class="font-bold text-brand-900">512GB Ultra Fast</span></div>
+            <div class="flex justify-between text-slate-700"><span>Installments:</span><span class="text-accent-emeraldDark font-bold">Easy Monthly Plan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-center mb-3">
+            <span class="text-xs font-mono font-bold text-brand-900">20% Discount Applied on Order</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20Tecno%20Camon%2030%20Pro%205G%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone 2: Infinix Note 40 Pro -->
+      <div class="card-glass rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="relative bg-slate-50 rounded-xl p-4 aspect-[4/3] flex items-center justify-center mb-4 border border-slate-100">
+            <span class="absolute top-2.5 left-2.5 discount-ribbon text-[10px] font-mono font-bold px-2.5 py-0.5 rounded">
+              20% OFF
+            </span>
+            <img class="w-full h-full object-contain mix-blend-multiply" alt="Infinix Note 40 Pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDstvrGEiYN8Zkn31INlBkPOngWl20ibeGcdECXb1FMOMtJGk87M9xtEeBOkSxrIBl7d_ctkbkJHuw8Tm5JZhN8ck4aus4gm6Gfs8EZiHbP1ZXssl9Nv5mF_NbTI1dcQCuFfnW9nL9ZsQvk4uGJCIixJeYyZrxC61HWbU9-2h9YRbh8CI6Fy8e_-TfSkCzcfw3MXJrC03qsht-n2Caw95uy1lBXedZ0BH6hbJjbODRg"/>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider block">INFINIX OFFICIAL // PTA APPROVED</span>
+          <h3 class="font-display text-lg font-bold text-slate-900 mt-1">Infinix Note 40 Pro</h3>
+          <p class="text-slate-600 text-xs mt-1 mb-4">3D-Curved 120Hz AMOLED • Cheetah X1 Silicon</p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-4 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Memory:</span><span class="font-bold text-brand-900">12GB RAM</span></div>
+            <div class="flex justify-between text-slate-700"><span>Storage:</span><span class="font-bold text-brand-900">256GB High Speed</span></div>
+            <div class="flex justify-between text-slate-700"><span>Installments:</span><span class="text-accent-emeraldDark font-bold">Easy Monthly Plan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-center mb-3">
+            <span class="text-xs font-mono font-bold text-brand-900">20% Discount Applied on Order</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20Infinix%20Note%2040%20Pro%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone 3: Vivo V30e -->
+      <div class="card-glass rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="relative bg-slate-50 rounded-xl p-4 aspect-[4/3] flex items-center justify-center mb-4 border border-slate-100">
+            <span class="absolute top-2.5 left-2.5 discount-ribbon text-[10px] font-mono font-bold px-2.5 py-0.5 rounded">
+              20% OFF
+            </span>
+            <img class="w-full h-full object-contain mix-blend-multiply" alt="Vivo V30e" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF_f7lrdl4GTk0_Rbfz0lDbO4zrePOUKtw81TmUk3rD2QyZX7U5RU04WGnm6VYswJU3JlS-dC477RjIkuasD1DT8kR7fVckKW9ZeaiC291uk1wF_s-9eZIvvNjaYREBF-oIlbMDk6YOTtXZRLyLrWNT2gjCk6N_Fn-ySGcJ4XIT1knt6j_8ux9CjR5_1w1wEWS3TlwKBHW9IHY_g3SNoYoTHLJxuc4RiDleV0AwGtu"/>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider block">VIVO OFFICIAL // PTA APPROVED</span>
+          <h3 class="font-display text-lg font-bold text-slate-900 mt-1">Vivo V30e 5G</h3>
+          <p class="text-slate-600 text-xs mt-1 mb-4">Studio Aura Light Portrait • 5500mAh Slim Body</p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-4 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Memory:</span><span class="font-bold text-brand-900">8GB + 8GB Extended</span></div>
+            <div class="flex justify-between text-slate-700"><span>Storage:</span><span class="font-bold text-brand-900">256GB UFS 2.2</span></div>
+            <div class="flex justify-between text-slate-700"><span>Installments:</span><span class="text-accent-emeraldDark font-bold">Easy Monthly Plan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-center mb-3">
+            <span class="text-xs font-mono font-bold text-brand-900">20% Discount Applied on Order</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20Vivo%20V30e%205G%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone 4: Realme 12+ 5G -->
+      <div class="card-glass rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="relative bg-slate-50 rounded-xl p-4 aspect-[4/3] flex items-center justify-center mb-4 border border-slate-100">
+            <span class="absolute top-2.5 left-2.5 discount-ribbon text-[10px] font-mono font-bold px-2.5 py-0.5 rounded">
+              20% OFF
+            </span>
+            <img class="w-full h-full object-contain mix-blend-multiply" alt="Realme 12+ 5G" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBADY3_cmypbPnGAkIx_GVukxGeCnGafaDAg7oFKvst-jQPlnKTr_VLOeEWNX1IXcMSSCQVPj1asUcvS8yerLNq6rzqc8lrgDP5FyHke1leLN2akxdASDiH3ZDU6JixBvEx54EZHINJN0-rbQFdEeIgDCNmcHx3u628Or1vMvek0y3Ut-T0V63cJHFizNo9j-HXAStH2gGS76NQLjDFSoN3MQmYpremh0LPcCymkUck"/>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider block">REALME OFFICIAL // PTA APPROVED</span>
+          <h3 class="font-display text-lg font-bold text-slate-900 mt-1">Realme 12+ 5G</h3>
+          <p class="text-slate-600 text-xs mt-1 mb-4">Luxury Watch Design • Sony LYT-600 OIS Master</p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-4 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Memory:</span><span class="font-bold text-brand-900">8GB + 8GB DRE</span></div>
+            <div class="flex justify-between text-slate-700"><span>Storage:</span><span class="font-bold text-brand-900">256GB Internal</span></div>
+            <div class="flex justify-between text-slate-700"><span>Installments:</span><span class="text-accent-emeraldDark font-bold">Easy Monthly Plan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-center mb-3">
+            <span class="text-xs font-mono font-bold text-brand-900">20% Discount Applied on Order</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20Realme%2012%2B%205G%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone 5: Oppo Reno 11F -->
+      <div class="card-glass rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="relative bg-slate-50 rounded-xl p-4 aspect-[4/3] flex items-center justify-center mb-4 border border-slate-100">
+            <span class="absolute top-2.5 left-2.5 discount-ribbon text-[10px] font-mono font-bold px-2.5 py-0.5 rounded">
+              20% OFF
+            </span>
+            <img class="w-full h-full object-contain mix-blend-multiply" alt="Oppo Reno 11F" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF9i3JfjrtaoqeWxyk3bvE1xsMW3JIOq5opyytLQmjEwxNZMdqOfCxmSlms65WIsXdx6Jg0iXM0paD6ig5gYYhys6n6gSCWTMvDYtXgTGsTF7HyFzH4pgRhVB7yUGOclgprOGE7DNTMeQXLlpsH_Pb33sfWCxG7k2zblOx5evwZ9GCH9gcikhczTGc38ZVa3IWgg--hWOFyzfkfdN159y8pqJYSz6t8hx9-MtXLl0O"/>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider block">OPPO OFFICIAL // PTA APPROVED</span>
+          <h3 class="font-display text-lg font-bold text-slate-900 mt-1">Oppo Reno 11F 5G</h3>
+          <p class="text-slate-600 text-xs mt-1 mb-4">64MP Ultra-Clear Triple Camera • 67W SuperVOOC</p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-4 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Memory:</span><span class="font-bold text-brand-900">8GB LPDDR4X</span></div>
+            <div class="flex justify-between text-slate-700"><span>Storage:</span><span class="font-bold text-brand-900">256GB UFS 3.1</span></div>
+            <div class="flex justify-between text-slate-700"><span>Installments:</span><span class="text-accent-emeraldDark font-bold">Easy Monthly Plan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-center mb-3">
+            <span class="text-xs font-mono font-bold text-brand-900">20% Discount Applied on Order</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20Oppo%20Reno%2011F%205G%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone 6: iPhone 15 Pro Max -->
+      <div class="card-glass rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <div class="relative bg-slate-50 rounded-xl p-4 aspect-[4/3] flex items-center justify-center mb-4 border border-slate-100">
+            <span class="absolute top-2.5 left-2.5 discount-ribbon text-[10px] font-mono font-bold px-2.5 py-0.5 rounded">
+              20% OFF
+            </span>
+            <div class="w-20 h-20 rounded-2xl bg-brand-900 text-white flex items-center justify-center">
+              <span class="material-symbols-outlined text-4xl">phone_iphone</span>
+            </div>
+          </div>
+          <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider block">APPLE // OFFICIAL PTA REGISTRY</span>
+          <h3 class="font-display text-lg font-bold text-slate-900 mt-1">iPhone 15 Pro Max</h3>
+          <p class="text-slate-600 text-xs mt-1 mb-4">Aerospace Titanium • A17 Pro Chip • 5x Optical Telephoto</p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-4 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Status:</span><span class="text-accent-emeraldDark font-bold">100% Official FBR Registered</span></div>
+            <div class="flex justify-between text-slate-700"><span>Condition:</span><span class="font-bold text-brand-900">Sealed & Mint Available</span></div>
+            <div class="flex justify-between text-slate-700"><span>Storage:</span><span class="font-bold text-brand-900">256GB / 512GB / 1TB</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="p-2.5 rounded-lg bg-brand-50 border border-brand-200 text-center mb-3">
+            <span class="text-xs font-mono font-bold text-brand-900">20% Discount Applied on Order</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20iPhone%2015%20Pro%20Max%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone 7 & 8: Samsung Galaxy S24 Ultra (Spans 2 cols) -->
+      <div class="card-glass rounded-2xl p-6 flex flex-col justify-between sm:col-span-2 lg:col-span-2 border-2 border-brand-200">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs text-brand-600 font-bold uppercase tracking-wider">SAMSUNG // OFFICIAL PTA REGISTERED</span>
+            <span class="discount-ribbon text-xs font-mono font-bold px-3 py-1 rounded-full">20% ROYAL PRIVILEGE</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-2">Samsung Galaxy S24 Ultra 5G</h3>
+          <p class="text-slate-600 text-sm mb-6">
+            Galaxy AI intelligence suite, 200MP Quad Tele System, Titanium Chassis, and Qualcomm Snapdragon 8 Gen 3 for Galaxy with embedded S-Pen.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-blue-50/70 p-4 rounded-xl font-mono text-xs mb-6 border border-blue-100">
+            <div><span class="text-slate-500 block text-[10px]">RAM CAPACITY</span><span class="font-bold text-brand-900">12GB LPDDR5X</span></div>
+            <div><span class="text-slate-500 block text-[10px]">STORAGE</span><span class="font-bold text-brand-900">512GB / 1TB</span></div>
+            <div><span class="text-slate-500 block text-[10px]">MAIN SENSOR</span><span class="font-bold text-brand-900">200MP OIS AI</span></div>
+            <div><span class="text-slate-500 block text-[10px]">PTA STATUS</span><span class="font-bold text-accent-emeraldDark">PTA Approved</span></div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-100">
+          <div class="text-left w-full sm:w-auto">
+            <span class="text-xs font-mono font-bold text-brand-800">Flat 20% Royal Privilege Discount active</span>
+            <span class="block text-xs text-slate-500">Includes 1-Year Official Samsung Warranty & Carlcare Coverage</span>
+          </div>
+          <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20am%20interested%20in%20Samsung%20Galaxy%20S24%20Ultra%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all">
+            <span class="material-symbols-outlined text-lg">chat</span>
+            <span>Claim 20% OFF on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 6. AUTHORIZED DIGITAL SOFTWARE TOOLS & DONGLES            -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="tools">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+        // GLOBAL SERVER CHANNELS & SUITE
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+        Authorized Digital Tools & Server Dongles
+      </h2>
+      <p class="text-slate-600 mt-2 text-sm sm:text-base">
+        Official server distributor managed by Abdul Rehman. 20% discount on all activations, renewals, and server credits.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Tool 1: UnlockTool -->
+      <div class="card-glass rounded-2xl p-6 relative flex flex-col justify-between">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">lock_open</span>
+          </div>
+          <span class="discount-ribbon text-[11px] font-mono font-bold px-2.5 py-1 rounded">
+            20% OFF ACTIVATION
+          </span>
+        </div>
+        <div>
+          <span class="font-mono text-[11px] text-brand-600 font-bold uppercase">OFFICIAL SERVER AUTHORIZED</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mt-1 mb-2">UnlockTool</h3>
+          <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+            World standard tool for Xiaomi, Samsung, Oppo, Vivo, and Apple bypass. Direct username account activation issued within 5 to 15 minutes.
+          </p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-6 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Validity:</span><span class="font-bold text-brand-900">3, 6, 12 Months Available</span></div>
+            <div class="flex justify-between text-slate-700"><span>Delivery:</span><span class="font-bold text-accent-emeraldDark">Instant Server Handshake</span></div>
+            <div class="flex justify-between text-slate-700"><span>Discount:</span><span class="font-bold text-brand-700">Flat 20% Discount</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20want%20to%20activate%20UnlockTool%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all">
+          <span class="material-symbols-outlined text-base">key</span>
+          <span>Order Activation with 20% OFF</span>
+        </a>
+      </div>
+
+      <!-- Tool 2: DFT Pro -->
+      <div class="card-glass rounded-2xl p-6 relative flex flex-col justify-between">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">settings</span>
+          </div>
+          <span class="discount-ribbon text-[11px] font-mono font-bold px-2.5 py-1 rounded">
+            20% OFF ACTIVATION
+          </span>
+        </div>
+        <div>
+          <span class="font-mono text-[11px] text-brand-600 font-bold uppercase">OFFICIAL SERVER AUTHORIZED</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mt-1 mb-2">DFT Pro Tool</h3>
+          <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+            Unrivaled power for Mediatek & Qualcomm chipsets. Repair IMEI, unbrick, wipe FRP, and dual-partition formatting without authentication error.
+          </p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-6 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Validity:</span><span class="font-bold text-brand-900">Annual Digital License</span></div>
+            <div class="flex justify-between text-slate-700"><span>Binding:</span><span class="font-bold text-accent-emeraldDark">Direct Server Binding</span></div>
+            <div class="flex justify-between text-slate-700"><span>Discount:</span><span class="font-bold text-brand-700">Flat 20% Discount</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20want%20to%20activate%20DFT%20Pro%20Tool%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all">
+          <span class="material-symbols-outlined text-base">key</span>
+          <span>Order Activation with 20% OFF</span>
+        </a>
+      </div>
+
+      <!-- Tool 3: Pandora Box / Tool -->
+      <div class="card-glass rounded-2xl p-6 relative flex flex-col justify-between">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">construction</span>
+          </div>
+          <span class="discount-ribbon text-[11px] font-mono font-bold px-2.5 py-1 rounded">
+            20% OFF ACTIVATION
+          </span>
+        </div>
+        <div>
+          <span class="font-mono text-[11px] text-brand-600 font-bold uppercase">OFFICIAL SERVER AUTHORIZED</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mt-1 mb-2">Pandora Box & Tool</h3>
+          <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+            High-tier Z3X team technology. Fast flash reading, backup security sectors, network restoration, and bootloader handling for modern Android flagships.
+          </p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-6 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Validity:</span><span class="font-bold text-brand-900">Digital Online License</span></div>
+            <div class="flex justify-between text-slate-700"><span>Updates:</span><span class="font-bold text-accent-emeraldDark">Future Packs Included</span></div>
+            <div class="flex justify-between text-slate-700"><span>Discount:</span><span class="font-bold text-brand-700">Flat 20% Discount</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20want%20to%20activate%20Pandora%20Tool%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all">
+          <span class="material-symbols-outlined text-base">key</span>
+          <span>Order Activation with 20% OFF</span>
+        </a>
+      </div>
+
+      <!-- Tool 4: Chimera Tool PRO -->
+      <div class="card-glass rounded-2xl p-6 relative flex flex-col justify-between">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">flash_on</span>
+          </div>
+          <span class="discount-ribbon text-[11px] font-mono font-bold px-2.5 py-1 rounded">
+            20% OFF ACTIVATION
+          </span>
+        </div>
+        <div>
+          <span class="font-mono text-[11px] text-brand-600 font-bold uppercase">OFFICIAL SERVER AUTHORIZED</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mt-1 mb-2">Chimera Tool PRO</h3>
+          <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+            All-round flagship maintenance powerhouse. Samsung Exynos & Snapdragon Knox repair, Huawei HarmonyOS downgrades, and factory reset solutions.
+          </p>
+          <div class="bg-blue-50/70 p-3 rounded-xl mb-6 font-mono text-xs space-y-1.5 border border-blue-100">
+            <div class="flex justify-between text-slate-700"><span>Tiers:</span><span class="font-bold text-brand-900">Samsung / PRO / Premium</span></div>
+            <div class="flex justify-between text-slate-700"><span>Credentials:</span><span class="font-bold text-accent-emeraldDark">Official Mail Assignment</span></div>
+            <div class="flex justify-between text-slate-700"><span>Discount:</span><span class="font-bold text-brand-700">Flat 20% Discount</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20want%20to%20activate%20Chimera%20Tool%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all">
+          <span class="material-symbols-outlined text-base">key</span>
+          <span>Order Activation with 20% OFF</span>
+        </a>
+      </div>
+
+      <!-- Tool 5 & 6: Custom Credits & Dongles (Spans 2 cols) -->
+      <div class="card-glass rounded-2xl p-6 relative flex flex-col justify-between md:col-span-2 lg:col-span-2">
+        <div class="flex items-start justify-between mb-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">devices</span>
+          </div>
+          <span class="discount-ribbon text-[11px] font-mono font-bold px-2.5 py-1 rounded">
+            20% OFF SERVER CREDITS
+          </span>
+        </div>
+        <div>
+          <span class="font-mono text-[11px] text-brand-600 font-bold uppercase">GLOBAL LIVE REPOSITORY</span>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mt-1 mb-2">Custom Server Credits & Hardware Boxes</h3>
+          <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+            UMT Pro, CM2 Dongle, Hydra Tool, Octoplus Box Credits, Samsung FRP Factory Server Credits, Griffin, and Apple MDM remote unlocking. Balances credited directly into your registered technician username.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-blue-50/70 p-3.5 rounded-xl mb-6 font-mono text-xs border border-blue-100">
+            <div><span class="text-slate-500 block text-[10px]">UMT / CM2</span><span class="font-bold text-brand-900">ACTIVE</span></div>
+            <div><span class="text-slate-500 block text-[10px]">OCTOPLUS</span><span class="font-bold text-brand-900">READY</span></div>
+            <div><span class="text-slate-500 block text-[10px]">SAMSUNG CREDITS</span><span class="font-bold text-accent-emeraldDark">INSTANT</span></div>
+            <div><span class="text-slate-500 block text-[10px]">MDM BYPASS</span><span class="font-bold text-brand-700">SUPPORTED</span></div>
+          </div>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20custom%20server%20credits%20or%20dongle%20support%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all">
+          <span class="material-symbols-outlined text-base">bolt</span>
+          <span>Instant Server Credit Desk (WhatsApp 0316 8518998)</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 7. HARDWARE DIAGNOSTIC REPAIR LAB (8 Services)            -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="hardware">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+          // SURGICAL WORKSHOP & DIAGNOSTICS
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Master Laboratory Diagnostic Services
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-1">
+          Every fix performed with precision micro-tooling under electrostatic-safe environments.
+        </p>
+      </div>
+      <div>
+        <span class="discount-ribbon font-mono text-xs font-bold px-3 py-1.5 rounded-full inline-flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm fill-icon">shield</span>
+          20% Service Fee Discount Active
+        </span>
+      </div>
+    </div>
+
+    <!-- 8 Diagnostic Services Grid (No prices, 20% OFF Badges) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Service 1: Display -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">screenshot</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">OPTICAL RESTORATION</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Display & Glass Refurbishing</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            OLED, AMOLED & Retina glass laminations. TrueTone calibration and multi-touch 120Hz refresh rate retention.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Display%20Replacement%20service%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 2: Battery -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">battery_charging_full</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">ENERGY CELLS</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Battery Health 100% Boost</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            Brand new original battery cells with chip transfer to remove "Unknown Part" warnings on iOS and Android.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Battery%20Replacement%20service%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 3: Charging Port -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">usb</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">INTERFACING HARDWARE</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Type-C & Lightning Sockets</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            SuperVOOC, Dart, and USB-PD fast-charging circuit fixes. Re-soldering flex cables with OEM charging modules.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Charging%20Socket%20Repair%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 4: Stock ROM Flashing -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">system_update_alt</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">FIRMWARE PROTOCOL</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Stock ROM & Bootloop Fix</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            Official firmware re-flash, unbricking dead handsets, baseband restoration, and secure region modifications.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Stock%20ROM%20Bootloop%20repair%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 5: Speaker & Mic -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">volume_up</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">ACOUSTIC MODULES</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Earpiece & Stereo Speaker</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            Audio IC diagnostics, muffled speaker replacements, dual microphone noise cancelling repairs for crisp calls.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Speaker%20Mic%20Repair%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 6: Camera Repair -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">photo_camera</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">OPTICAL SENSORS</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">OIS Camera & Lens Repair</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            Vibrating focus motor repairs, sapphire camera lens glass swaps, and multi-sensor array replacements.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Camera%20Repair%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 7: Water Damage Revival -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">water_drop</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">DECONTAMINATION</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Liquid Damage Revival</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            Chemical ultrasonic bath, circuit oxidation cleanup, and component-level corrosion remediation.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Water%20Damage%20Recovery%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Service 8: IC Reballing -->
+      <div class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-10 h-10 rounded-lg bg-blue-50 text-brand-700 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">memory</span>
+            </span>
+            <span class="discount-ribbon text-[10px] font-mono font-bold px-2 py-0.5 rounded">20% OFF</span>
+          </div>
+          <span class="font-mono text-[10px] text-brand-600 font-bold uppercase block">MICROSURGERY</span>
+          <h4 class="font-display text-base font-bold text-slate-900 mt-1 mb-2">Motherboard IC Reballing</h4>
+          <p class="text-slate-600 text-xs mb-5 leading-relaxed">
+            Power IC, CPU & Baseband BGA chip reballing with precision stencils under stereo microscope inspection.
+          </p>
+        </div>
+        <a href="https://wa.me/923168518998?text=Hello%20Abdul%20Rehman%2C%20I%20need%20Motherboard%20IC%20Reballing%20with%2020%25%20Discount" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-blue-50 hover:bg-brand-700 hover:text-white text-brand-800 font-bold text-xs text-center border border-blue-200 transition-all">
+          Book on WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. INSTANT VIP TRADE-IN & BUY-BACK DESK                   -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="tradein">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border-2 border-brand-200 shadow-lg relative overflow-hidden">
+      <div class="max-w-2xl mb-8">
+        <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+          // INSTANT EXCHANGE VALUATION
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+          VIP Trade-In & Device Buy-Back Desk
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Upgrade effortlessly or sell your existing smartphone with instant cash settlement or swap credit.
+        </p>
+      </div>
+
+      <!-- Trade-in Form -->
+      <form class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end" onsubmit="event.preventDefault(); submitTradeinValuation();">
+        <div>
+          <label class="block font-mono text-xs font-bold text-slate-700 mb-2">1. SELECT BRAND</label>
+          <select id="trade-brand" class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700">
+            <option>Apple iPhone</option>
+            <option>Samsung Galaxy</option>
+            <option>Tecno</option>
+            <option>Infinix</option>
+            <option>Vivo</option>
+            <option>Realme / OPPO</option>
+            <option>Xiaomi / Redmi</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-mono text-xs font-bold text-slate-700 mb-2">2. MODEL & STORAGE</label>
+          <input id="trade-model" type="text" placeholder="e.g. iPhone 13 128GB" required class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700"/>
+        </div>
+        <div>
+          <label class="block font-mono text-xs font-bold text-slate-700 mb-2">3. PHYSICAL CONDITION</label>
+          <select id="trade-condition" class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700">
+            <option>Mint / Flawless Box Pack</option>
+            <option>Minor Scratches / 100% Functional</option>
+            <option>Cracked Glass (Screen Works)</option>
+            <option>Non-PTA / Bypass</option>
+            <option>Dead / Motherboard Issue</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all">
+            <span class="material-symbols-outlined text-lg">sync_alt</span>
+            <span>Get 20% Bonus Value</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-slate-100 text-xs text-slate-600 font-medium">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-brand-700 text-base fill-icon">verified</span>
+          <span>Instant Spot Verification at Shop #14 Geo Mobile Mall</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-brand-700 text-base fill-icon">price_check</span>
+          <span>Highest Fair Market Quote with 20% Royal Bonus Applied</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-brand-700 text-base fill-icon">electric_bolt</span>
+          <span>Instant Bank Transfer or Cash on Hand</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 9. ABOUT ABDUL REHMAN & TRUST VERIFICATION                -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="specialist">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Profile Card -->
+      <div class="lg:col-span-5">
+        <div class="card-glass p-8 rounded-3xl text-center border-2 border-brand-200">
+          <div class="w-24 h-24 mx-auto rounded-2xl bg-brand-900 border-4 border-brand-200 p-1 mb-5 flex items-center justify-center text-white shadow-lg">
+            <span class="material-symbols-outlined text-5xl">military_tech</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mb-1">
+            Abdul Rehman
+          </h3>
+          <p class="font-mono text-xs text-brand-700 font-bold uppercase tracking-wider mb-4">
+            CHIEF SPECIALIST & PROPRIETOR // RMZ
+          </p>
+          <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+            Over a decade of surgical smartphone hardware remediation, advanced BGA micro-soldering, and certified master server dongle distributions throughout Karachi and nationwide.
+          </p>
+          <div class="grid grid-cols-2 gap-2 text-left text-xs font-mono mb-6">
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
+              <span class="text-slate-500 block text-[10px]">STATION:</span>
+              <span class="text-slate-900 font-bold">Shop #14 Geo Mobile Mall</span>
+            </div>
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
+              <span class="text-slate-500 block text-[10px]">SUCCESS RATE:</span>
+              <span class="text-accent-emeraldDark font-bold">99.4% Verified</span>
+            </div>
+          </div>
+          <a href="tel:03168518998" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm transition-all shadow">
+            <span class="material-symbols-outlined text-base">support_agent</span>
+            <span>Direct Call: 0316 8518998</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Testimonials & Trust -->
+      <div class="lg:col-span-7">
+        <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+          // REPUTATION & PROOF OF MASTERY
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6">
+          "Trust is Earned Under the Microscope"
+        </h2>
+        <p class="text-slate-600 text-base mb-8 leading-relaxed">
+          Located in the heart of Geo Mobile Mall in Sarjani Town, Rehman Mobile Zone has served thousands of retail patrons and professional GSM technicians. Transparent services and the permanent 20% Royal Privilege discount make RMZ the definitive mobile destination.
+        </p>
+        <div class="space-y-4">
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-900 font-bold text-sm">Muhammad Tariq</span>
+                <span class="text-xs text-slate-400 font-mono">// Sarjani Town</span>
+              </div>
+              <div class="flex text-accent-gold">
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+              </div>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              "My dead Samsung S23 Ultra was declined by 3 shops. Abdul Rehman bhai reballed the power IC right in front of me at Shop 14. Plus gave me 20% discount on the bench fee. Genuine king!"
+            </p>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-900 font-bold text-sm">Kamran Siddiqui</span>
+                <span class="text-xs text-slate-400 font-mono">// GSM Technician, Karachi</span>
+              </div>
+              <div class="flex text-accent-gold">
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                <span class="material-symbols-outlined text-sm fill-icon">star</span>
+              </div>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              "I get all my UnlockTool and DFT Pro activations through Abdul Rehman. Fast 5-minute response on WhatsApp even late at night, and always official rates with 20% discount. 100% recommended."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 10. PHYSICAL SANCTUARY, MAP & VIP CONTACT                 -->
+  <!-- ========================================================= -->
+  <section class="py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-blue-100" id="contact">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="font-mono text-xs font-bold text-brand-700 uppercase tracking-widest block mb-2">
+        // PHYSICAL SANCTUARY & DIRECT CONCIERGE
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+        Visit Rehman Mobile Zone in Karachi
+      </h2>
+      <p class="text-slate-600 mt-2 text-sm sm:text-base">
+        Operating 1:00 PM to 12:00 AM daily at Geo Mobile Mall, Sarjani Town.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Contact Form (6 Cols) -->
+      <div class="lg:col-span-6 card-glass p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <h3 class="font-display text-2xl font-bold text-slate-900 mb-6">
+            Send VIP Consultation Request
+          </h3>
+          <form class="space-y-4 mb-6" onsubmit="event.preventDefault(); submitVipForm();">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-mono text-xs font-bold text-slate-700 mb-1.5">FULL NAME</label>
+                <input id="contact-name" type="text" placeholder="Your Name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700"/>
+              </div>
+              <div>
+                <label class="block font-mono text-xs font-bold text-slate-700 mb-1.5">WHATSAPP NUMBER</label>
+                <input id="contact-phone" type="tel" placeholder="03XXXXXXXXX" required class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700"/>
+              </div>
+            </div>
+            <div>
+              <label class="block font-mono text-xs font-bold text-slate-700 mb-1.5">SERVICE CATEGORY</label>
+              <select id="contact-category" class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700">
+                <option>Smartphone Sales / PTA Flagship with 20% OFF</option>
+                <option>Digital Tools & Dongles (UnlockTool, DFT, Pandora)</option>
+                <option>Hardware Lab (Screen, Battery, IC Repair)</option>
+                <option>Trade-In & Buy-Back Desk</option>
+                <option>General Tech Support</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-mono text-xs font-bold text-slate-700 mb-1.5">PROBLEM / DEVICE DETAILS</label>
+              <textarea id="contact-message" rows="3" placeholder="Describe device model & requirements..." required class="w-full bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm p-3 focus:border-brand-700 focus:ring-1 focus:ring-brand-700"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-base">send</span>
+              <span>Submit with 20% Discount Privilege</span>
+            </button>
+          </form>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-slate-100 text-xs">
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-brand-700 text-xl">mail</span>
+            <div>
+              <span class="text-slate-400 block text-[10px]">EMAIL DESK</span>
+              <a href="mailto:fistgeming9@gmail.com" class="text-slate-800 font-mono font-bold hover:text-brand-700">fistgeming9@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <span class="material-symbols-outlined text-brand-700 text-xl">phone_iphone</span>
+            <div>
+              <span class="text-slate-400 block text-[10px]">DIRECT HOTLINE</span>
+              <a href="tel:03168518998" class="text-brand-700 font-mono font-bold">0316 8518998</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card (6 Cols) -->
+      <div class="lg:col-span-6 card-glass p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-brand-700 text-2xl">storefront</span>
+              <h3 class="font-display text-2xl font-bold text-slate-900">Physical Lab Location</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-[11px] font-bold border border-emerald-200">
+              OPEN TODAY (1PM - 12AM)
+            </span>
+          </div>
+
+          <div class="bg-blue-50/70 p-4 rounded-2xl border border-blue-100 mb-6 font-mono text-xs text-slate-800 space-y-2">
+            <div class="text-brand-900 font-bold text-sm">Shop #14, Geo Mobile Mall</div>
+            <div class="text-slate-600">Sarjani Town, Sector 4-B, North Karachi, Pakistan</div>
+            <div class="text-slate-500 text-[11px] flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm text-brand-700">near_me</span>
+              Main Commercial Hub near 4-K Chowrangi & Sarjani Road
+            </div>
+          </div>
+
+          <!-- Stylized Google Maps Location Hub -->
+          <div class="relative w-full h-56 rounded-2xl overflow-hidden border border-blue-200 mb-6 bg-gradient-to-tr from-blue-900 to-brand-700 flex items-center justify-center text-center p-6 text-white shadow-inner">
+            <div>
+              <span class="material-symbols-outlined text-5xl text-accent-gold mb-2 animate-bounce">pin_drop</span>
+              <div class="font-display text-lg font-bold">REHMAN MOBILE ZONE</div>
+              <div class="text-xs text-blue-200 mb-4">Shop #14, Geo Mobile Mall, Sarjani Town, Karachi</div>
+              <a href="https://maps.google.com/?q=Geo+Mobile+Mall+Sarjani+Town+Karachi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white text-brand-900 font-bold text-xs shadow hover:bg-blue-50 transition-all">
+                <span class="material-symbols-outlined text-sm text-brand-700">map</span>
+                <span>Open in Google Maps</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-2xl text-brand-700">local_mall</span>
+            <div>
+              <div class="font-mono text-xs text-brand-900 font-bold">In-Mall Parking Available</div>
+              <div class="text-[11px] text-slate-500">Secure, Air-Conditioned Mobile Plaza</div>
+            </div>
+          </div>
+          <a href="tel:03168518998" class="text-xs font-mono text-brand-700 underline font-bold">Call for Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 11. UNIFIED FOOTER                                        -->
+  <!-- ========================================================= -->
+  <footer class="bg-white border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left max-w-md">
+        <div class="flex items-center justify-center md:justify-start gap-2.5 mb-2">
+          <div class="w-8 h-8 rounded-lg bg-brand-900 flex items-center justify-center text-white font-display font-bold text-xs">
+            RM
+          </div>
+          <span class="font-display text-lg font-extrabold text-brand-900 uppercase">
+            REHMAN MOBILE ZONE
+          </span>
+        </div>
+        <p class="text-slate-500 text-xs leading-relaxed">
+          © 2024 Rehman Mobile Zone. Unified Tech Sanctuary, Surgical Diagnostic Lab & Authorized Digital Server Facilitator under Abdul Rehman. Flat 20% Privilege Discount Active.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 text-xs font-semibold text-slate-600">
+        <a href="#mobiles" class="hover:text-brand-700 transition-colors">Flagship Mobiles</a>
+        <a href="#tools" class="hover:text-brand-700 transition-colors">Software Dongles</a>
+        <a href="#hardware" class="hover:text-brand-700 transition-colors">Hardware Repairs</a>
+        <a href="#tradein" class="hover:text-brand-700 transition-colors">VIP Buy-Back</a>
+        <a href="#specialist" class="hover:text-brand-700 transition-colors">Specialist Monogram</a>
+        <a href="https://wa.me/923168518998" class="text-brand-700 font-bold hover:underline">WhatsApp Direct</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- 12. FLOATING WHATSAPP & HOTLINE DOCK (WITH 20% OFF BADGE) -->
+  <!-- ========================================================= -->
+  <aside class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <!-- Call trigger -->
+    <a href="tel:03168518998" class="w-13 h-13 p-3.5 rounded-full bg-white border-2 border-brand-300 text-brand-800 flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all" title="Call Abdul Rehman 0316 8518998">
+      <span class="material-symbols-outlined text-2xl text-brand-700">call</span>
+    </a>
+
+    <!-- WhatsApp Trigger with 20% OFF badge -->
+    <div class="relative group">
+      <span class="absolute -top-3 -right-2 bg-brand-900 text-white font-mono text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow-md border border-white">
+        20% OFF
+      </span>
+      <a href="https://wa.me/923168518998?text=Assalam%20o%20Alaikum%20Abdul%20Rehman%20bhai%2C%20I%20am%20contacting%20you%20via%20your%20website%20for%20service%20with%2020%25%20Royal%20Discount." target="_blank" rel="noopener noreferrer" class="h-14 px-5 rounded-full bg-accent-emeraldDark text-white flex items-center gap-2.5 shadow-xl hover:scale-105 active:scale-95 transition-all">
+        <span class="w-3 h-3 rounded-full bg-accent-emerald animate-ping"></span>
+        <span class="material-symbols-outlined text-2xl text-emerald-300">chat</span>
+        <span class="font-bold text-sm hidden sm:inline">WhatsApp Specialist</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Interactive JavaScript Helper -->
+  <script>
+    function submitTradeinValuation() {
+      const brand = document.getElementById('trade-brand').value;
+      const model = document.getElementById('trade-model').value;
+      const condition = document.getElementById('trade-condition').value;
+      
+      const message = `Hello Abdul Rehman, I want to trade-in my phone with 20% Bonus Value!%0A- Brand: ${encodeURIComponent(brand)}%0A- Model: ${encodeURIComponent(model)}%0A- Condition: ${encodeURIComponent(condition)}`;
+      window.open(`https://wa.me/923168518998?text=${message}`, '_blank');
+    }
+
+    function submitVipForm() {
+      const name = document.getElementById('contact-name').value;
+      const phone = document.getElementById('contact-phone').value;
+      const category = document.getElementById('contact-category').value;
+      const details = document.getElementById('contact-message').value;
+
+      const message = `VIP Consultation Request (20% OFF Active):%0A- Client: ${encodeURIComponent(name)}%0A- Phone: ${encodeURIComponent(phone)}%0A- Category: ${encodeURIComponent(category)}%0A- Details: ${encodeURIComponent(details)}`;
+      window.open(`https://wa.me/923168518998?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
